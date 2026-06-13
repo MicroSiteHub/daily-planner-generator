@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Planner Generator — MicroPlan Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <img src="assets/logo.png" alt="MicroPlan Studio" class="logo" />
+    </header>
+
+    <main>
+      <h1>Daily Planner Generator</h1>
+      <p>Create a simple, printable daily planner in seconds.</p>
+
+      <section class="controls">
+        <label>
+          Layout:
+          <select id="layoutSelect">
+            <option value="simple">Simple</option>
+            <option value="schedule">Schedule</option>
+            <option value="tasks">Tasks Only</option>
+          </select>
+        </label>
+
+        <button id="generateBtn">Generate Planner</button>
+      </section>
+
+      <section id="previewArea">
+        <!-- Planner preview will be injected here -->
+      </section>
+
+      <button id="downloadBtn" class="hidden">Download PDF</button>
+    </main>
+
+    <footer>
+      <p>© MicroPlan Studio — Free planner tools</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

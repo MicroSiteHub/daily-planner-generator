@@ -79,20 +79,88 @@ footer {
   background: white;
   box-sizing: border-box;
   border: 1px solid #ddd;
-  position: relative;
   font-family: Inter, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-.planner-section {
-  margin-bottom: 24px;
+.planner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.planner-section h3 {
-  margin-bottom: 8px;
+.planner-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.date-box {
+  font-size: 16px;
+}
+
+.planner-row {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.planner-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
   font-size: 18px;
+  margin: 0 0 8px 0;
 }
 
-.planner-lines {
+.priority-list,
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.priority-list li,
+.task-list li {
+  border-bottom: 1px solid #ccc;
+  height: 22px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #666;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.schedule-table .time {
+  width: 60px;
+  border: 1px solid #ccc;
+  padding: 4px;
+  font-size: 14px;
+}
+
+.schedule-table .slot {
+  border: 1px solid #ccc;
+  height: 24px;
+}
+
+.notes-box {
   border: 1px solid #ccc;
   height: 180px;
+  margin-top: 10px;
 }

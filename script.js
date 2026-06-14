@@ -113,13 +113,16 @@ document.getElementById("downloadBtn").addEventListener("click", () => {
   const element = document.querySelector(".planner-page");
 
   const opt = {
-    margin: 0,
+    margin: 0, // absolutely required
     filename: "daily-planner.pdf",
     image: { type: "jpeg", quality: 1 },
     html2canvas: {
-      scale: 3, // High DPI
+      scale: 2, // 2 is enough; 3 sometimes causes overflow
       useCORS: true,
-      letterRendering: true,
+      scrollX: 0,
+      scrollY: 0,
+      windowWidth: element.scrollWidth,
+      windowHeight: element.scrollHeight,
     },
     jsPDF: {
       unit: "in",

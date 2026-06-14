@@ -17,17 +17,29 @@ document.getElementById("generateBtn").addEventListener("click", () => {
 
   if (layout === "schedule") {
     preview.innerHTML = `
-            <h2>Daily Schedule</h2>
-            <hr>
-            <table style="width:100%;border-collapse:collapse;">
-                ${Array.from({ length: 12 })
-                  .map(
-                    (_, i) =>
-                      `<tr><td style="border:1px solid #ccc;padding:8px;">${i + 8}:00</td><td style="border:1px solid #ccc;"></td></tr>`,
-                  )
+    <div class="planner-page">
+        <h2>Daily Planner</h2>
+
+        <div class="planner-section">
+            <h3>Top Priorities</h3>
+            <ul><li></li><li></li><li></li></ul>
+        </div>
+
+        <div class="planner-section">
+            <h3>Tasks</h3>
+            <ul>
+                ${Array.from({ length: 10 })
+                  .map(() => `<li></li>`)
                   .join("")}
-            </table>
-        `;
+            </ul>
+        </div>
+
+        <div class="planner-section">
+            <h3>Notes</h3>
+            <div class="planner-lines"></div>
+        </div>
+    </div>
+`;
   }
 
   if (layout === "tasks") {
@@ -43,4 +55,18 @@ document.getElementById("generateBtn").addEventListener("click", () => {
   }
 
   document.getElementById("downloadBtn").classList.remove("hidden");
+});
+
+document.getElementById("downloadBtn").addEventListener("click", () => {
+  const element = document.getElementById("previewArea");
+
+  const options = {
+    margin: 0.5,
+    filename: "daily-planner.pdf",
+    image: { type: "jpeg", quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+  };
+
+  html2pdf().from(element).set(options).save();
 });

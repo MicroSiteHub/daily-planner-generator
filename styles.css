@@ -30,6 +30,7 @@ main {
 }
 
 #previewArea {
+  display: block;
   width: 8.5in;
   height: 11in;
   margin-top: 30px;

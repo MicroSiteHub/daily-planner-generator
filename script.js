@@ -121,8 +121,6 @@ document.getElementById("downloadBtn").addEventListener("click", () => {
       useCORS: true,
       scrollX: 0,
       scrollY: 0,
-      windowWidth: element.scrollWidth,
-      windowHeight: element.scrollHeight,
     },
     jsPDF: {
       unit: "in",

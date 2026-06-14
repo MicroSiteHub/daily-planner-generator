@@ -12,6 +12,13 @@ header {
   border-bottom: 1px solid #e0e0e0;
 }
 
+h2 {
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
 .logo {
   height: 40px;
 }

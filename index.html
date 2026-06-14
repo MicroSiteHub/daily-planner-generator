@@ -3,10 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daily Planner Generator — MicroPlan Studio</title>
+    <title>
+      Daily Planner Generator — Free Printable PDF | MicroPlan Studio
+    </title>
+    <meta
+      name="description"
+      content="Generate a free printable daily planner PDF in seconds. Simple layouts, task lists, schedules, and notes. No signup required — fast, clean, and ready to print."
+    />
+
+    <meta
+      property="og:title"
+      content="Daily Planner Generator — Free Printable PDF"
+    />
+    <meta
+      property="og:description"
+      content="Create a simple, printable daily planner PDF in seconds. No signup required."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://daily.microplanstudio.com" />
+    <meta
+      property="og:image"
+      content="https://daily.microplanstudio.com/assets/og-image.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Daily Planner Generator — Free Printable PDF"
+    />
+    <meta
+      name="twitter:description"
+      content="Create a simple, printable daily planner PDF in seconds."
+    />
+    <meta
+      name="twitter:image"
+      content="https://daily.microplanstudio.com/assets/og-image.png"
+    />
+
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Daily Planner Generator",
+        "applicationCategory": "Productivity",
+        "operatingSystem": "Web",
+        "description": "Generate a free printable daily planner PDF in seconds.",
+        "url": "https://daily.microplanstudio.com",
+        "image": "https://daily.microplanstudio.com/assets/og-image.png",
+        "author": {
+          "@type": "Organization",
+          "name": "MicroPlan Studio"
+        }
+      }
+    </script>
   </head>
   <body>
     <header>
@@ -16,6 +69,8 @@
     <main>
       <h1>Daily Planner Generator</h1>
       <p>Create a simple, printable daily planner in seconds.</p>
+
+      <h2>Create Your Daily Planner</h2>
 
       <section class="controls">
         <label>
@@ -29,6 +84,8 @@
 
         <button id="generateBtn">Generate Planner</button>
       </section>
+
+      <h2>Planner Preview</h2>
 
       <section id="previewArea">
         <!-- Planner preview will be injected here -->
@@ -46,6 +103,18 @@
         for beautifully designed, customizable planner templates!
       </p>
     </div>
+
+    <section class="seo-text">
+      <h2>Free Daily Planner Generator</h2>
+      <p>
+        This free daily planner generator helps you create a clean, printable
+        PDF planner in seconds. Choose from simple layouts, task-focused pages,
+        or full daily schedules. Perfect for productivity, time management,
+        students, work planning, and personal organization.
+      </p>
+
+      <p>No signup required — just generate, download, and print.</p>
+    </section>
 
     <footer>
       <p>© MicroPlan Studio — Free planner tools</p>

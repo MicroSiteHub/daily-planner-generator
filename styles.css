@@ -74,11 +74,12 @@ footer {
 
 .planner-page {
   width: 8.5in;
-  min-height: 11in;
-  padding: 40px;
+  height: 11in;
+  padding: 0.5in;
   background: white;
-  border: 1px solid #ddd;
   box-sizing: border-box;
+  border: 1px solid #ddd;
+  position: relative;
   font-family: Inter, sans-serif;
 }
 

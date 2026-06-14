@@ -58,15 +58,23 @@ document.getElementById("generateBtn").addEventListener("click", () => {
 });
 
 document.getElementById("downloadBtn").addEventListener("click", () => {
-  const element = document.getElementById("previewArea");
+  const element = document.querySelector(".planner-page");
 
-  const options = {
-    margin: 0.5,
+  const opt = {
+    margin: 0,
     filename: "daily-planner.pdf",
-    image: { type: "jpeg", quality: 0.98 },
-    html2canvas: { scale: 2 },
-    jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+    image: { type: "jpeg", quality: 1 },
+    html2canvas: {
+      scale: 3, // High DPI
+      useCORS: true,
+      letterRendering: true,
+    },
+    jsPDF: {
+      unit: "in",
+      format: "letter",
+      orientation: "portrait",
+    },
   };
 
-  html2pdf().from(element).set(options).save();
+  html2pdf().set(opt).from(element).save();
 });

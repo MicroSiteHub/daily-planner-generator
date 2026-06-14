@@ -19,27 +19,45 @@ document.getElementById("generateBtn").addEventListener("click", () => {
                     <li></li>
                 </ul>
 
+                <h2>Schedule</h2>
+                <table class="schedule-table">
+                    ${Array.from({ length: 4 })
+                      .map(
+                        (_, i) =>
+                          `<tr>
+                            <td class="time">${i + 8}:00am</td>
+                            <td class="slot"></td>
+                        </tr>`,
+                      )
+                      .join("")}
+                    ${Array.from({ length: 1 })
+                      .map(
+                        (_, i) =>
+                          `<tr>
+                            <td class="time">${i + 12}:00pm</td>
+                            <td class="slot"></td>
+                        </tr>`,
+                      )
+                      .join("")}
+                    ${Array.from({ length: 7 })
+                      .map(
+                        (_, i) =>
+                          `<tr>
+                            <td class="time">${i + 1}:00pm</td>
+                            <td class="slot"></td>
+                        </tr>`,
+                      )
+                      .join("")}
+                </table>
+            </div>
+
+            <div class="planner-column">
                 <h2>Tasks</h2>
                 <ul class="task-list">
                     ${Array.from({ length: 12 })
                       .map(() => `<li><span class="checkbox"></span></li>`)
                       .join("")}
                 </ul>
-            </div>
-
-            <div class="planner-column">
-                <h2>Schedule</h2>
-                <table class="schedule-table">
-                    ${Array.from({ length: 12 })
-                      .map(
-                        (_, i) =>
-                          `<tr>
-                            <td class="time">${i + 8}:00</td>
-                            <td class="slot"></td>
-                        </tr>`,
-                      )
-                      .join("")}
-                </table>
             </div>
         </div>
 

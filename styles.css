@@ -188,19 +188,33 @@ h2 {
   font-size: 18px;
 }
 
-.related-tools ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0 0;
-}
-
-.related-tools li {
-  margin: 6px 0;
-}
-
 .related-tools a {
-  color: #4a6fa5;
+  color: #4f46e5;
   font-weight: 600;
+  text-decoration: none;
+}
+
+.related-tools a:hover {
+  color: #4338ca;
+  text-decoration: underline;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.related-grid a {
+  color: #4a6fa5;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.related-grid a:hover {
+  text-decoration: underline;
 }
 
 .upsell-banner {
